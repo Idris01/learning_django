@@ -1,0 +1,49 @@
+*,*::after, *::before{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+
+body {
+	display:grid;
+	grid-template-rows:auto 1fr auto;
+	height: 100vh;
+}
+
+header{
+	background:black;
+	color:white;
+	min-height: 3rem;
+}
+
+main{
+	background:blue;
+	color:yellow;
+}
+footer{
+	background:violet;
+	color:white;
+	min-height: 3rem;
+}
+
+header, main, footer {
+	padding: 1em;
+}
+
+.boxes {
+	background:green;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap:1em;
+}
+
+.boxes div{
+	height: 4rem;
+	background: yellow;
+}
+
+@media (min-width:700px){
+	.boxes {
+		grid-template-columns: 1fr 1fr;
+	}
+}

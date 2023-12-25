@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+ <h1> Houses Page </h1>
+		 <ul>
+		 {% for house in houses %}
+		 <li> 
+			 Name: {{ house.name }} Country:{{ house.country }}
+			 <p> {{ house.description }} </p>
+			 <img src={{ house.image }} />
+		 </li>
+		 {% endfor %}
+		 </ul>
+		 <div class="boxes">
+			 <div>1</div>
+			 <div>2</div>
+			 <div>3</div>
+			 <div>4</div>
+			 <div>5</div>
+			 <div>6</div>
+		 </div>
+{% endblock %}
